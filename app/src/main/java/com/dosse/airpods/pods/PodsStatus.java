@@ -3,6 +3,8 @@ package com.dosse.airpods.pods;
 import com.dosse.airpods.pods.models.AirPods1;
 import com.dosse.airpods.pods.models.AirPods2;
 import com.dosse.airpods.pods.models.AirPods3;
+import com.dosse.airpods.pods.models.AirPods4;
+import com.dosse.airpods.pods.models.AirPods4ANC;
 import com.dosse.airpods.pods.models.AirPodsMax;
 import com.dosse.airpods.pods.models.AirPodsPro;
 import com.dosse.airpods.pods.models.AirPodsPro2;
@@ -79,6 +81,10 @@ public class PodsStatus {
             mPods = new AirPods2(leftPod, rightPod, casePod); // Airpods 2nd gen
         } else if ("1320".equals(idFull)) {
             mPods = new AirPods3(leftPod, rightPod, casePod); // Airpods 3rd gen
+        } else if ("1920".equals(idFull)) {
+            mPods = new AirPods4(leftPod, rightPod, casePod); // Airpods 4
+        } else if ("1B20".equals(idFull)) {
+            mPods = new AirPods4ANC(leftPod, rightPod, casePod); // Airpods 4 (ANC)
         } else if ("0E20".equals(idFull)) {
             mPods = new AirPodsPro(leftPod, rightPod, casePod); // Airpods Pro
         } else if ("1420".equals(idFull) || "2420".equals(idFull)) {
